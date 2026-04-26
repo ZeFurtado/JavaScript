@@ -49,3 +49,4 @@ factorial = function(number)
 const fatorial = (x) => factorial(x);
 
 console.log(fatorial(5));
+
