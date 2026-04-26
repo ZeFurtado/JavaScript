@@ -50,3 +50,44 @@ const fatorial = (x) => factorial(x);
 
 console.log(fatorial(5));
 
+
+
+function converterParaMinusculo(palavra){
+    if(typeof(palavra) == "undefined"){
+        return " ";
+    }else{
+        return palavra.toLowerCase();
+    }
+}
+
+console.log(`Converter para minúsculo ${converterParaMinusculo(palavra)}`);
+
+var palavra = "AMIANTO";
+
+let num = 8;
+
+function numeroParaString(number){
+    if(number === "undefined" || number == null || Number.isNaN(number)){
+        return " ";
+    }else{
+        return number.toString();
+    }
+}
+
+console.log(`Número para string ${numeroParaString(num)} Verificando tipo: ${typeof(numeroParaString(num))}`)
+
+function inverterNumero(numero){
+    if(typeof(numero) != "number" || numero <= 0){
+        return 0;
+    }else{
+        const palavra = numero.toString().split('');
+        const numeroInvertido = [];
+
+        for(i = palavra.length - 1; i >= 0; i--){
+            numeroInvertido.push(palavra[i]);
+        }
+        return numeroInvertido.toString().replaceAll(",", "");
+    }
+}
+
+console.log(inverterNumero(8877));
