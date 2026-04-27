@@ -59,7 +59,6 @@ function insertionSort(array){
         while(n >=0 && array[n] > troca){
             array[n + 1] = array[n];
             n = n -1;
-            console.log(array);
         }
         
         array[n + 1] = troca;
@@ -67,8 +66,56 @@ function insertionSort(array){
 
     return array;
 }
-
 console.log(`[Ordenação por inserção] ${insertionSort(arrayDesordenado)}`);
+
+const arrayDesordenado2 = [35,65,78,12,45,98];
+
+function bubbleSort(array){
+    for(let i = array.length - 1; i > 0; i--){
+
+        for(let j = 0; j < i; j++){
+            if(array[j] > array[j + 1]){
+                let troca = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = troca;
+                console.log(array);
+            }
+        }
+    }
+
+    return array;
+}
+
+console.log(`[Ordenação por Bolha] ${bubbleSort(arrayDesordenado2)}`);
+
+
+const arrayDesordenado3 = [25,98,78,45,13,65]
+console.log(`Array desordenado 3 ${arrayDesordenado3}`);
+
+function selectionSort(array){
+    for(let i = 0; i < array.length; i++){
+        let menorNumero = array[i];
+        let j = i + 1;
+        let posicaoMenorNumero = i;
+
+        while(j < array.length){
+            if(array[j] < menorNumero){
+                menorNumero = array[j];
+                posicaoMenorNumero = j;
+            }
+            j++;
+        }
+
+        array[posicaoMenorNumero] = array[i];
+        array[i] = menorNumero;
+    }
+
+    return array;
+}
+
+
+console.log(`[Ordenação por seleção] ${selectionSort(arrayDesordenado3)}`);
+
 
 
 
