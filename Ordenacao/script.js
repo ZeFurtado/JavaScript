@@ -81,7 +81,6 @@ function bubbleSort(array){
                 let troca = array[j + 1];
                 array[j + 1] = array[j];
                 array[j] = troca;
-                console.log(array);
             }
         }
     }
