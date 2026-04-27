@@ -47,7 +47,28 @@ function buscaBinaria(lista, alvo){
 
 console.log(`Resultado: ${buscaBinaria(arrayOrdenado, alvo)}`);
 
-console.log(`[Ordenação por inserção] `)
+
+
+const arrayDesordenado = [3, 8, 7, 2, 1, 9];
+
+function insertionSort(array){
+    for(i = 1; i < array.length; i++){
+        let troca = array[i];
+        let n = i - 1;
+
+        while(n >=0 && array[n] > troca){
+            array[n + 1] = array[n];
+            n = n -1;
+            console.log(array);
+        }
+        
+        array[n + 1] = troca;
+    }
+
+    return array;
+}
+
+console.log(`[Ordenação por inserção] ${insertionSort(arrayDesordenado)}`);
 
 
 
