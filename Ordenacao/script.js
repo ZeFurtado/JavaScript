@@ -1,3 +1,5 @@
+//Busca Linear
+
 var array1 = [0, 5, 8 ,1, 3, 7, 9, 4, 6];
 const arrayString = array1.toString();
 
@@ -13,7 +15,7 @@ function buscarElemento(lista, alvo){
 
 console.log(`O número 4 se encontra na posição ${buscarElemento(array1, 4)} do array`);
 
-
+//Busca Binária
 const arrayOrdenado = [3,6,9,15,24,36,45,55,87];
 const alvo = 55;
 
@@ -48,7 +50,7 @@ function buscaBinaria(lista, alvo){
 console.log(`Resultado: ${buscaBinaria(arrayOrdenado, alvo)}`);
 
 
-
+//Insertion Sort
 const arrayDesordenado = [3, 8, 7, 2, 1, 9];
 
 function insertionSort(array){
@@ -68,6 +70,7 @@ function insertionSort(array){
 }
 console.log(`[Ordenação por inserção] ${insertionSort(arrayDesordenado)}`);
 
+//Bubble Sort
 const arrayDesordenado2 = [35,65,78,12,45,98];
 
 function bubbleSort(array){
@@ -89,6 +92,7 @@ function bubbleSort(array){
 console.log(`[Ordenação por Bolha] ${bubbleSort(arrayDesordenado2)}`);
 
 
+//Selection Sort
 const arrayDesordenado3 = [25,98,78,45,13,65]
 console.log(`Array desordenado 3 ${arrayDesordenado3}`);
 
