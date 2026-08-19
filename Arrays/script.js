@@ -76,4 +76,15 @@ function contaLetrasIguais(matriz, letra){
 console.log(contaLetrasIguais(matrizString, "a"));
 
 
+const Palavras = ["Boa", "Bob", "Silvio"]
+function ContarLetras(palavras){
+    let biggerWord;
+
+    for(let i = 0; i < palavras.length; i++){
+        palavras[i].toLowerCase();
+        let count = 0;
+    }
+}
+
+
 
