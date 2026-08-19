@@ -120,5 +120,100 @@ function selectionSort(array){
 console.log(`[Ordenação por seleção] ${selectionSort(arrayDesordenado3)}`);
 
 
+//Quick Sort
 
+const arrayDesordenado4 = [9,4,3,8,2,7,0,6,1,5];
+
+function quickSort(array){
+    if(array.length <= 1){
+        return array;
+    }
+
+    let pivot = array[array.length - 1];
+    let left = [];
+    let right = [];
+    let i = - 1;
+    
+    for(let j = 0; j < array.length - 1; j++){
+        if(array[j] < pivot){
+            i++;            
+            let troca = array[i];
+            array[i] = array[j];
+            array[j] = troca;
+            left.push(array[i]);
+        }else{
+            right.push(array[j]);
+        }
+
+    }
+
+    return [...quickSort(left), pivot, quickSort(right)]; 
+    
+    
+}
+
+console.log(`[Ordenação por quick sort] ${quickSort(arrayDesordenado4)}`);
+
+
+//Merge Sort
+
+const arrayDesordenado5 = [38, 27, 43, 3, 9, 82, 10];
+
+function mergeSort(array){
+    if(array.length <= 1){
+        return array;
+    }
+
+    const meio = Math.floor(array.length / 2);
+    const esquerda = array.slice(0, meio);
+    const direita = array.slice(meio);
+
+    return merge(mergeSort(esquerda), mergeSort(direita));
+    
+    function merge(esquerda, direita){
+        let result = [];
+        let indexEsquerda = 0;
+        let indexDireita = 0;
+
+        while(indexEsquerda < esquerda.length && indexDireita < direita.length){
+            if(esquerda[indexEsquerda] < direita[indexDireita]){
+                result.push(esquerda[indexEsquerda]);
+                indexEsquerda++;
+            }else{
+                result.push(direita[indexDireita]);
+                indexDireita++;
+            }
+        }
+
+        return result.concat(esquerda.slice(indexEsquerda).concat(direita[indexDireita]));
+    }
+}
+
+console.log(`Ordenação por Merge Sort ${mergeSort(arrayDesordenado5)}`);
+
+console.log(`Números repetidos`);
+
+const arrayNumRepetidos = [5,7,7,7,8,8,8,8,9,9,9]
+function NumerosRepetidos(array){
+    let numberCount = 0;
+    let number = array[0];
+
+    for(let i = 1; i < array.length; i++){
+        let numberCount2 = 1;
+        let index = i;
+        while(array[i - 1] == array[index] && index < array.length){
+            numberCount2++;
+            index++;
+        }
+
+        if(numberCount2 > numberCount){
+            number = array[i];
+            numberCount = numberCount2;
+        }
+
+        console.log(`Número mais repetido até esta iteraçõa ${number} aparece ${numberCount} vezes`);
+    }
+}
+
+NumerosRepetidos(arrayNumRepetidos);
 
