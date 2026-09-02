@@ -2,8 +2,6 @@ const rockstars =  ["Ozzy Osbourne", "Axl Rose", "Slash", "Jim Morrison", "Flea"
 
 const rockstars2 = ["Steven Adler", "Jimmy Page", "Jimi Hendrix", "Klaus Meine", "Dio"];
 
-
-
 rockstars.forEach(element => {
     console.log(element);    
 });
