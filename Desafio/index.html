@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <h1>Informações</h1>
+    <label for="info" id="info"></label>
+
+    <h1>Frase do dia</h1>
+    <label for="frase" id="frase"></label>
+
+    <h1>Array Meses do Ano</h1>
+    <label for="meses" id="meses"></label>
+
+    <h1>Objeto Jogo</h1>
+    <label for="jogo" id="jogo"></label>
+    <script>
+        
+        const info = document.getElementById("info");
+        const frase = document.getElementById("frase");
+        const meses = document.getElementById("meses");
+        const jogo = document.getElementById("jogo");
+
+        const Info = {
+        Lutador: 'Fedor Valdimirovich Emelianenko',
+        Nacionalidade: 'Russo',
+        Idade: 44,
+        Peso: 106,
+        Altura: 1.83
+        }
+
+        const Frase = {
+            Dia: 10,
+            Mes: 9,
+            Ano: 2021,
+            Frase: 'Seja curioso. Leia de tudo. Tente coisas novas. O que as pessoas chamam de inteligência se resume a curiosidade.', 
+            Autor: 'Aaron Swartz'
+        }
+
+        const mesesAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']
+        
+        const ObjetoJogo = {
+            Jogo: 'League of Legends - LOL',
+            Desenvolvedora: 'Riot Games',
+            Ano: '2009'
+        }
+
+        info.innerHTML = `<p>Lutador: ${Info.Lutador}</p>
+                          <p>Nacionalidade:${Info.Nacionalidade}</p>
+                          <p>Idade: ${Info.Idade}</p>
+                          <p>Altura: ${Info.Peso}</p>`;
+
+        frase.innerHTML = `<p>${Frase.Dia}/${Frase.Mes}/${Frase.Ano}</p>
+                           <p>${Frase.Frase}</p>
+                           <p>${Frase.Autor}</p>`;
+
+        meses.innerHTML = `${mesesAno}`;
+
+        jogo.innerHTML = `<p class="cor-roxa">Jogo: ${ObjetoJogo.Jogo}</p>
+                          <p>Desenvolvido por: ${ObjetoJogo.Desenvolvedora}</p>
+                          <p>Ano de lançamento: ${ObjetoJogo.Ano}</p>`;
+
+
+                          
+        
+    </script>
+</body>
+</html>
